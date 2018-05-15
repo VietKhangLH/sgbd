@@ -16,8 +16,5 @@ set wrap off
 @$1
 
 exit;
-EOF && echo $1.sql executé
-
-
-
+EOF
 
