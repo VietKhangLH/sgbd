@@ -5,7 +5,7 @@ module.exports = {
 	objets,
 	generate () {
 		return objets
-			.map((objet, index) => createInsertQuery('objet', [index, `'${objet}'`, 0, 0, 0]))
+			.map((objet, index) => createInsertQuery('objet', [index, `'${objet}'`, 0, 0]))
 			.join('')
 	}
 }

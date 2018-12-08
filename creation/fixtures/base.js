@@ -16,7 +16,7 @@ create table proprietaire (id int not null, nom varchar(255) not null, primary k
 create table type (id int not null, nom varchar(255) not null, primary key(id));
 create table attaque (id int not null, type_id int not null, nom varchar(255) not null, puissance int not null, perequis int not null, precizion int not null, constraint fk_attaque_type foreign key (type_id) references type(id), primary key(id));
 create table zone (id int not null, nom varchar(255) not null, primary key(id));
-create table objet (id int not null, nom varchar(255) not null, est_unique number(1) not null, est_offensif number(1), est_evoluant number(1), primary key(id));
+create table objet (id int not null, nom varchar(255) not null, est_unique number(1) not null, est_offensif number(1), primary key(id));
 create table genre (id int not null, femelle number(1) not null, male number(1) not null, primary key(id));
 create table etat (id int not null, nom varchar(255) not null, primary key(id));
 create table espece (id int not null, objet_id int, source_id int, nom varchar(255) not null, constraint fk_espece_objet foreign key (objet_id) references objet(id), constraint fk_espece_espece foreign key (source_id) references espece(id), primary key(id));
