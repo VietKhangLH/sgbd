@@ -8,11 +8,9 @@ fi
 sqlplus -s /nolog << EOF
 connect vklho/shellcode;
 
-whenever sqlerror continue none;
-set echo off
-set heading off
-set line 150
-set wrap off
+set lin 150
+set wrap on
+
 @$1
 
 exit;
