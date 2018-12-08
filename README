@@ -1,0 +1,10 @@
+Bienvenue sur notre projet de SGBD
+
+Pour générer les bases et y mettre des données aléatoires
+1. npm install (ou yarn)
+2. node creation
+3. Un fichier 'init.sql' a été généré
+
+Pour exécuter un fichier sql, il faut faire ./run.sh {{ fichier sans extension }}
+
+Les requêtes clientes se situent dans le dossier client
