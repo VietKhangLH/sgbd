@@ -12,7 +12,7 @@ module.exports = {
 		return especes.map((espece, index) => {
 			return createInsertQuery('espece', [
 				index,
-				randomIdIf(50, objets),
+				randomIdIf(90, objets),
 				randomIdIf(10, especes.slice(0, index)),
 				// les espèces après index n'existent pas encore
 				`'${espece}'`
