@@ -19,11 +19,11 @@ append(deleteAll)
 
 const fixtures = [
 	'proprietaire',
+  'type',
+  'attaque',
 	'zone',
-	'attaque',
 	'objet',
 	'genre',
-	'type',
 	'etat',
 	'espece',
 	'monstropoche',
