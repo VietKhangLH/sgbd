@@ -39,3 +39,4 @@ fixtures.forEach(entity => {
 
 
 console.log('Requêtes de création générées --> init.sql')
+console.log('Prochaine étape : ./run.sh init')
