@@ -34,7 +34,7 @@ module.exports = {
         randomIdIf(100, genres),
         randomIdIf(100, etats),
         randomIdIf(100, objets),
-        faker.random.number(50) ? 0 : randomIf(100, especes),
+        faker.random.number(50) > 50 ? 0 : randomIdIf(100, especes),
         100,
         faker.random.number(100),
         faker.random.number(100)
