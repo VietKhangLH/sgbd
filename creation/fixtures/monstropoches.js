@@ -28,13 +28,13 @@ module.exports = {
 	monstropoches,
 	generate () {
 		return [...monstropoches,
-      ...Array.from({ length: 2 }, () => ([ // on add 2 monstros de la même espece pour un test fonctionnel
+      ...Array.from({ length: 20 }, () => ([ // on add des monstros de la même espece pour un test fonctionnel
         `'${faker.internet.userName()}'`,
         0,
         randomIdIf(100, genres),
         randomIdIf(100, etats),
         randomIdIf(100, objets),
-        0,
+        faker.random.number(50) ? 0 : randomIf(100, especes),
         100,
         faker.random.number(100),
         faker.random.number(100)
