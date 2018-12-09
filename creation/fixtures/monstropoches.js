@@ -30,8 +30,19 @@ module.exports = {
 		return monstropoches.map((monstropoche, index) => {
 			return createInsertQuery('monstropoche', [
 				index,
-				...monstropoche
-				])
+				...monstropoche,
+        ...Array.from({ length: 2 }, () => ([ // on add 2 monstros de la même espece pour un test fonctionnel
+          `'${faker.internet.userName()}'`,
+          0,
+          randomIdIf(100, genres),
+          randomIdIf(100, etats),
+          randomIdIf(100, objets),
+          especes[0],
+          100,
+          faker.random.number(100),
+          faker.random.number(100)
+        ]))
+			])
 		}).join('')
 	}
 }
