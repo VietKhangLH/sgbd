@@ -5,15 +5,33 @@
 -- de ce type qu’il possède.
 
 select
-  proprietaire.nom as joueur,
-  count(espece_type.type_id ) as nb_type
-from proprietaire
-inner join monstropoche
-  on monstropoche.proprietaire_id = proprietaire.id
-inner join espece
-  on espece.id = monstropoche.espece_id
-inner join espece_type
-  on espece_type.espece_id = espece.id
-group by proprietaire.nom
+  proprietaire,
+  type,
+  nombre_monstropoche
+from
+(
+  select
+    proprietaire,
+    type,
+    nombre_monstropoche,
+    row_number() over (partition by proprietaire order by nombre_monstropoche desc) as row_num
+  from
+  (
+    select
+      proprietaire.nom as proprietaire,
+      type.nom as type,
+      count(type.id) as nombre_monstropoche
+    from type
+    inner join espece_type on espece_type.type_id = type.id
+    inner join espece on espece.id = espece_type.espece_id
+    inner join monstropoche on monstropoche.espece_id = espece.id
+    inner join proprietaire on proprietaire.id = monstropoche.proprietaire_id
+    group by
+      proprietaire.nom,
+      type.nom
+    order by proprietaire.nom
+  )
+)
+where row_num = 1
 ;
 
