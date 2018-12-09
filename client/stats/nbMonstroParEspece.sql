@@ -4,8 +4,11 @@ select
   espece.nom,
   count(monstropoche.id) as nombre_monstropoches
 from monstropoche
-inner join espece
+right join espece
   on espece_id = espece.id
 group by espece.nom
+order by
+  espece.nom,
+  nombre_monstropoches
 ;
 
