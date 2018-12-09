@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]] ; then
-    echo 'il faut un fichier sql (sans extension)'
+    echo 'il faut un fichier sql en param'
     exit 0
 fi
 
