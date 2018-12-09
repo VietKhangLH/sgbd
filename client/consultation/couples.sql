@@ -11,7 +11,7 @@ select
   male.surnom as male
 from
   (
-    select
+    select -- femelle
       monstropoche.id as id,
       monstropoche.surnom as surnom,
       monstropoche.pe as pe,
@@ -27,7 +27,7 @@ from
     where genre.femelle = 1
   ) femelle,
   (
-    select
+    select -- male
       monstropoche.id as id,
       monstropoche.surnom as surnom,
       monstropoche.pe as pe,
