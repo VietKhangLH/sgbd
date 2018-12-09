@@ -1,0 +1,6 @@
+-- les couples de monstropoches pouvant engendrer un enfant ;
+-- pour engendrer, un couple doit être formé de deux individus
+-- de même espèce ou ayant la même espèce souche, l’un doit
+-- posséder le genre male et l’autre le genre femelle ;
+-- les deux individus doivent aussi être libres
+-- ou appartenir au même propriétaire et avoir des PE supérieurs à 20.
