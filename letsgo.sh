@@ -4,11 +4,10 @@
 clear
 cat README
 
-check sqlplus
-
 if ask "Voulez-vous régénérer la base ?"; then
-  check node
-  cd src/creation && node . && cd ../../
+  if check node; then
+    cd src/creation && node . && cd ../../
+  fi
 fi
 
 cp src/creation/bd.sql .
