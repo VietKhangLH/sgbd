@@ -6,16 +6,17 @@
 
 select
   monstropoche.surnom as monstropoche,
-  source.nom as espece,
-  espece.nom as mutation,
+  espece.nom as espece,
+  mutation.nom as mutation,
   monstropoche.pe as points_experience,
-  objet.nom as objet_evoluant
-from espece
-inner join espece source
-  on espece.source_id = source.id
+  decode(objet.nom, null, 'Aucun objet evoluant', objet.nom) as objet_evoluant
+from espece mutation
+inner join espece
+  on mutation.source_id = espece.id
 inner join monstropoche
-  on monstropoche.espece_id = source.id
+  on monstropoche.espece_id = espece.id
 left join objet
-  on objet.id = monstropoche.objet_id 
+  on objet.id = espece.objet_id
+order by monstropoche.surnom
 ;
 

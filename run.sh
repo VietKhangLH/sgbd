@@ -8,8 +8,11 @@ fi
 sqlplus -s /nolog << EOF
 connect vklho/shellcode;
 
-set lin 150
-set wrap on
+column name format a10
+column address format a20
+column telephone format 999999999
+set linesize 100 pagesize 50
+
 
 @$1
 
