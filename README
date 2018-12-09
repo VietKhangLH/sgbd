@@ -1,10 +1,14 @@
-Bienvenue sur notre projet de SGBD
+Bienvenue sur notre projet de SGBD - Monstropoches !
 
-Pour générer les bases et y mettre des données aléatoires
-1. npm install (ou yarn)
-2. node creation
-3. Un fichier 'init.sql' a été généré
+Il est composé de deux parties :
 
-Pour exécuter un fichier sql, il faut faire ./run.sh {{ fichier sans extension }}
+a) Initialisation
+La base est crée à partir des requêtes situées dans ./creation/base/
+Les données sont générées de façon pertinente et consistante avec faker.
 
-Les requêtes clientes se situent dans le dossier client
+b) Requêtes clientes
+Les requêtes clientes se trouvent dans
+* ./client/consultation
+* ./client/stats
+* ./client/update
+
