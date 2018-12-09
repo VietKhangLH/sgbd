@@ -1,7 +1,7 @@
 -- le nombre de monstropoches de chaque espèce
 
 select
-  espece.nom,
+  espece.nom as espece,
   count(monstropoche.id) as nombre_monstropoches
 from monstropoche
 right join espece
