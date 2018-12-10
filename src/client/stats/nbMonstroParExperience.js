@@ -41,27 +41,3 @@ append(intervals.map(({ start, end }) =>
 append(`
 ;
 `)
-
-
-/*
-select
-  pe_0_9.nombre as pe_0_9
-from
-  (
-    select sum(id) as nombre
-    from monstropoche
-    where pe >= 0 and pe <= 9
-  ) pe_0_9
-;
-
-
-*/
-/*
-for (let i = MIN ; i < MAX ; i += STEP) {
-  const from = i
-  const to = i + STEP - 1
-  appendFileSync('test.sql', `
-  pe_${from}_${to}.nombre as pe_${from}_${to}
-`)
-}
-*/
