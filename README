@@ -10,5 +10,4 @@ b) Requêtes clientes
 Les requêtes clientes se trouvent dans
 * ./client/consultation
 * ./client/stats
-* ./client/update
 
