@@ -12,13 +12,11 @@ fi
 clear
 cat README
 
-cp src/creation/bd.sql .
-
 find ./src/client/ -name 'nbMonstro'
 
 if check sqlplus; then
   if ask "Reset de la base avec les requêtes de création ?"; then
-    ./.run.sh bd.sql
+    ./.run.sh src/creation/bd.sql
   fi
 else
   echo "Pas de sqlplus..."
