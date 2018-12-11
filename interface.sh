@@ -12,8 +12,6 @@ fi
 clear
 cat README
 
-find ./src/client/ -name 'nbMonstro'
-
 if check sqlplus; then
   if ask "Reset de la base avec les requêtes de création ?"; then
     ./.run.sh src/creation/bd.sql
@@ -23,7 +21,7 @@ else
   exit
 fi
 
-while promptExecSql; do
+while promptExecSql 'src'; do
   :
 done
 
