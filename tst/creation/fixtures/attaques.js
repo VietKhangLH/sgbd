@@ -1,8 +1,5 @@
 const { createInsertQuery } = require('./_helper')
-const attaques = [`Triplattaque`, `Escalade`, `Morphing`, `Vœu`, `Grobisou`, `Pilonnage`, `Recyclage`, `Regard Médusant`, `E-Coque`, `Constriction`, `Picanon`, `Uppercut`, `Coup de Main`, `Flash`, `Conversion`, `Affûtage`, `Croc de Mort`, `Par Ici`, `Attrition`, `Force-Nature`, `Combo-Griffe`, `Explosion`, `Trempette`, `Exuviation`, `CoudKrâne`, `Météores`, `Relais`, `Rengorgement`, `BoulArmure`]
-const faker = require('../faker')
-const { sample } = require('lodash')
-
+const attaques = ['Attaque_1', 'Attaque_2']
 const { types } = require('./types')
 
 module.exports = {
@@ -11,11 +8,11 @@ module.exports = {
 		return attaques.map((attaque, index) => {
 			return createInsertQuery('attaque', [
 				index,
-        types.indexOf(sample(types)),
+        0,
 				`'${attaque}'`,
-				faker.random.number(250),
-				faker.random.number(100),
-				faker.random.number(100)
+				100,
+				0,
+				0
 				])
 		}).join('')
 	}

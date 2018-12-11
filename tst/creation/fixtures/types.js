@@ -1,6 +1,6 @@
 const { createInsertQuery } = require('./_helper')
 
-const types = ['Glace', 'Dragon', 'Sol', 'Plante', 'Feu', 'Eau', 'Électrique', 'Psy', 'Spectre', 'Ténèbre', 'Fée', 'Acier', 'Poison', 'Roche', 'Combat', 'Insecte', 'Normal']
+const types = ['Glace', 'Dragon']
 
 module.exports = {
 	types,

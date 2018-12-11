@@ -1,21 +1,9 @@
-const { createInsertQuery, randomIdIf } = require('./_helper')
-const faker = require('../faker')
-const { uniqWith, isEqual, sample } = require('lodash')
+const { createInsertQuery } = require('./_helper')
 
 const { monstropoches } = require('./monstropoches')
 const { attaques } = require('./attaques')
 
-const monstropochesAttaques = uniqWith([...monstropoches.map((monstropoche, index) => {
-	return [
-		index,
-    attaques.indexOf(sample(attaques))
-	]
-}), ...attaques.map((attaque, index) => {
-	return [
-    monstropoches.indexOf(sample(monstropoches)),
-		index
-	]
-})], isEqual)
+const monstropochesAttaques = []
 
 module.exports = {
 	monstropochesAttaques,

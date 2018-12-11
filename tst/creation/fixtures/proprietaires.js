@@ -1,10 +1,6 @@
-const faker = require('../faker/locale/fr')
 const { createInsertQuery } = require('./_helper')
-const { uniq } = require('lodash')
 
-const proprietaires = uniq(Array.from(
-	{ length: 100 },
-	() => faker.name.findName()))
+const proprietaires = []
 
 module.exports = {
 	proprietaires,
